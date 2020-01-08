@@ -1,0 +1,16 @@
+.header{
+    min-height: 90px;
+    background-color: #2B1980;
+    -moz-box-shadow: 0 4px 4px #3821ab3d;
+    -webkit-box-shadow: 0 4px 4px #3821ab3d;
+    box-shadow: 0 4px 4px #3821ab3d;
+    display: flex;
+    justify-content: space-between;
+        &--title{
+            @include wideFont(#fff, 2.6rem, 600, 2rem, 2px);
+            @import url('https://fonts.googleapis.com/css?family=Lilita+One&display=swap');
+            font-family: 'Lilita One', cursive;
+            align-self: center;
+            margin-left: 40px;
+        }
+}
