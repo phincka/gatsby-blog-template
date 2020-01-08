@@ -1,16 +1,24 @@
 .header{
-    min-height: 90px;
-    background-color: #2B1980;
+    min-height: 120px;
     -moz-box-shadow: 0 4px 4px #3821ab3d;
     -webkit-box-shadow: 0 4px 4px #3821ab3d;
     box-shadow: 0 4px 4px #3821ab3d;
     display: flex;
     justify-content: space-between;
         &--title{
-            @include wideFont(#fff, 2.6rem, 600, 2rem, 2px);
-            @import url('https://fonts.googleapis.com/css?family=Lilita+One&display=swap');
-            font-family: 'Lilita One', cursive;
+            @include wideFont(#000, 2.6rem, 600, 2rem, 2px);
+            font-family: 'Playfair Display', serif;
             align-self: center;
-            margin-left: 40px;
+            margin-left: 80px;
+        }
+        &__nav{
+            align-self: center;
+            margin-right: 150px;
+                &--element{
+                    @include wideFont($mainColor, .9rem, 400, 24px, 1px);
+                    font-family: 'Playfair Display', serif;
+                    text-transform: uppercase;
+                    margin: 0 20px;
+                }
         }
 }
