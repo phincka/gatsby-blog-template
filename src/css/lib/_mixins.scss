@@ -1,4 +1,6 @@
-@mixin fontStyle($color, $fontSize, $fontWeight, $align) {
+//! Text mixins
+
+@mixin fontStyle($color, $fontSize, $fontWeight, $align: null) {
     color: $color;
     font-size: $fontSize;
     font-weight: $fontWeight;
@@ -12,17 +14,29 @@
     letter-spacing: $letterS;
 }
 
-@mixin justify($direction: null) {
-    @if $direction == null{
-        display: flex;
-        justify-content: space-between;
+
+//! Flex mixins
+
+@mixin start($direction: null){
+    display: flex;
+    justify-content: flex-start;
+    @if ($direction == 'c'){
+        align-items: center;
     }
-    @else if $direction == 'col' {
-        display: flex;
-        justify-content: space-between;
+}
+@mixin end($direction: null){
+    display: flex;
+    justify-content: flex-end;
+    @if ($direction == 'c'){
+        align-items: center;
+    }
+}
+@mixin justify($direction: null) {
+    display: flex;
+    justify-content: space-between;
+    @if $direction == 'col' {
         flex-direction: column;
     }
-
 }
 
 @mixin button($bgColor, $hBgColor, $fSize, $fColor ) {

@@ -4,51 +4,33 @@ exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions
     const result = await graphql(`
     query {
-        allDatoCmsRecip {
+        allDatoCmsArticle {
             edges {
                 node {
                     title
                     slug
                     shortDescription
                     content
-                    thumbnail {
-                        url
-                        alt
+                    meta {
+                        publishedAt(formatString: "DD/MM/YYYY")
                     }
                 }
             }
         }
     }
   `)
-    result.data.allDatoCmsRecip.edges.forEach(({ node }) => {
+    result.data.allDatoCmsArticle.edges.forEach(({ node }) => {
         createPage({
             path: node.slug,
-            component: path.resolve(`./src/pages/recipt-view.jsx`),
+            component: path.resolve(`./src/pages/article-template.jsx`),
             context: {
                 title: node.title,
                 slug: node.slug,
                 shortDescription: node.shortDescription,
                 content: node.content,
-                thumbnail: {
-                    url: node.thumbnail.url,
-                    alt: node.thumbnail.alt
-                }
             },
         })
     })
 }
-/*
 
 
-query Pages {
-        gcms {
-          solutionses {
-            text
-            slug
-            title
-          }
-        }
-      }
-
-
-      */

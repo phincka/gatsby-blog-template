@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Kuchnia Pawła`,
+    title: `Paweł Hincka`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@phincka`,
+    author: `Paweł Hincka`,
   },
   plugins: [
     `gatsby-plugin-sass`,
@@ -33,13 +33,17 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Playfair Display`,
-            variants: [`400`, `700`]
+            family: `Signika`,
+            variants: [`700`]
           },
           {
-            family: `Roboto Mono`,
-            variants: [`400`]
-          }
+            family: `Roboto Condensed`,
+            variants: [`700`]
+          },
+          {
+            family: `Ubuntu Condensed`,
+            variants: [`400`, `700`]
+          },
         ],
       }
     },

@@ -1,0 +1,10 @@
+.footer{
+    padding: 10px 20px;
+    color: $titleColor;
+        &--link{
+            color: #000;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+}

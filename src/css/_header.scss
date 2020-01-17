@@ -1,22 +1,12 @@
 .header{
-    min-height: 120px;
-    -moz-box-shadow: 0 4px 4px #3821ab3d;
-    -webkit-box-shadow: 0 4px 4px #3821ab3d;
-    box-shadow: 0 4px 4px #3821ab3d;
-    display: flex;
-    justify-content: space-between;
-        &--title{
-            @include wideFont(#000, 2.6rem, 600, 2rem, 2px);
-            font-family: 'Playfair Display', serif;
-            align-self: center;
-            margin-left: 80px;
-        }
+    width: 100%;
+    @include end(c);
         &__nav{
-            align-self: center;
-            margin-right: 150px;
+            padding: 20px;
+            margin: 20px 60px 0 0;
+            @include end(c);
                 &--element{
                     @include wideFont($mainColor, .9rem, 400, 24px, 1px);
-                    font-family: 'Playfair Display', serif;
                     text-transform: uppercase;
                     margin: 0 20px;
                 }

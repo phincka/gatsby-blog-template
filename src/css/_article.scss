@@ -1,0 +1,68 @@
+.article{
+    width: 50%;
+    margin: 0 auto;
+    padding: 50px 0 120px;
+        &--title{
+            @include fontStyle($primary, 3rem, 700, center)
+        }
+        &__content{
+            margin-top: 80px;
+            h1{
+                @include fontStyle($titleColor, 2.5rem, 700)
+            }
+            h2{
+                @include fontStyle($titleColor, 2rem, 700)
+            }
+            h3{
+                @include fontStyle($titleColor, 1.7rem, 700)
+            }
+            h4{
+                @include fontStyle($titleColor, 1.5rem, 700)
+            }
+            h5{
+                @include fontStyle($titleColor, 1.2rem, 700)
+            }
+            p{
+                @include fontStyle($mainColor, 1rem, 400)
+            }
+            a{
+                text-decoration: underline;
+            }
+            pre{
+                font-family: monospace;
+                white-space: pre;
+                margin: 1em 0;
+            }
+            em{
+                font-style: italic;
+            }
+            blockquote {
+                background: #f9f9f9;
+                border-left: 5px solid $secondaryColor;
+                margin: 1.5em 10px;
+                padding: 0.5em 10px;
+                quotes: "\201C""\201D""\2018""\2019";
+                }
+                
+                blockquote p {
+                display: inline;
+                }
+            table {
+                margin: 10px 0;                
+                    *{
+                        border: 1px dashed $mainColor;
+                    }
+                  
+            }
+            ul, ol{
+                margin: 10px 20px;
+            }
+        }
+        &--link{
+            display: block;
+            width: 100%;
+            margin-top: 50px;
+            text-decoration: underline;
+            @include fontStyle($titleColor, 1.2rem, 400, right);
+        }
+}
