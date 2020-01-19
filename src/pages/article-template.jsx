@@ -3,6 +3,8 @@ import { Link } from 'gatsby'
 import Layout from "../components/layout"
 import parse from 'html-react-parser';
 
+
+
 const ArticleTemplate = (result) => {
     console.log(result)
     return (
@@ -13,6 +15,7 @@ const ArticleTemplate = (result) => {
                     { parse(result.pageContext.content) } 
                 </div>
                 <Link className="article--link" to="/"> Powrót </Link>
+
             </article>
         </Layout>
     )

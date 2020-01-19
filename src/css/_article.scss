@@ -8,22 +8,41 @@
         &__content{
             margin-top: 80px;
             h1{
-                @include fontStyle($titleColor, 2.5rem, 700)
+                @include fontStyle($titleColor, 2.5rem, 700);
+                line-height: 2.5rem;
             }
             h2{
-                @include fontStyle($titleColor, 2rem, 700)
+                @include fontStyle($titleColor, 2rem, 700);
+                line-height: 2rem;
+                margin: 30px 0;
+                margin-top: 45px;
             }
             h3{
-                @include fontStyle($titleColor, 1.7rem, 700)
+                @include fontStyle($titleColor, 1.7rem, 700);
+                line-height: 1.7rem;
+                margin: 25px 0;
+                margin-top: 40px;
             }
             h4{
-                @include fontStyle($titleColor, 1.5rem, 700)
+                @include fontStyle($titleColor, 1.5rem, 700);
+                line-height: 1.5rem;
+                margin: 20px 0;
+                margin-top: 35px;
             }
             h5{
-                @include fontStyle($titleColor, 1.2rem, 700)
+                @include fontStyle($titleColor, 1.2rem, 700);
+                line-height: 1.2rem;
+                margin: 20px 0;
+                margin-top: 35px;
             }
             p{
-                @include fontStyle($mainColor, 1rem, 400)
+                @include fontStyle($mainColor, 1.1rem, 400);
+                letter-spacing: .3px;
+                line-height: 1.4rem;
+                margin: 20px 0;
+            }
+            img{
+                display: block;
             }
             a{
                 text-decoration: underline;
@@ -39,13 +58,13 @@
             blockquote {
                 background: #f9f9f9;
                 border-left: 5px solid $secondaryColor;
-                margin: 1.5em 10px;
+                margin: 3em 5px;
                 padding: 0.5em 10px;
                 quotes: "\201C""\201D""\2018""\2019";
                 }
                 
                 blockquote p {
-                display: inline;
+                display: block;
                 }
             table {
                 margin: 10px 0;                

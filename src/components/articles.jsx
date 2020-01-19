@@ -3,7 +3,7 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 
 const Articles = () => {
     const data = useStaticQuery(graphql`
-        query ListingRecipts {
+        query ListingArticles {
             allDatoCmsArticle {
                 edges {
                     node {
@@ -24,8 +24,7 @@ const Articles = () => {
     const articlesMap = data.allDatoCmsArticle.edges.map(({ node }) => {
         return (
             <article key={node.id} className="posts_list__single">
-                <h5 className="posts_list__single--date">{node.meta.publishedAt}</h5>
-                <h2 className="posts_list__single--title">{node.title}</h2>
+                <h2 className="posts_list__single--title"><Link to={node.slug}>{node.title}</Link></h2>
                 <p className="posts_list__single--shortDescription">{node.shortDescription}</p>
                 <Link className="posts_list__single--button" to={node.slug}> Więcej...</Link>
             </article>
