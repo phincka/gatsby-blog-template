@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 
+
 const Articles = () => {
     const data = useStaticQuery(graphql`
         query ListingArticles {

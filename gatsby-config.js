@@ -5,6 +5,7 @@ module.exports = {
     author: `Paweł Hincka`,
   },
   plugins: [
+    
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     {
@@ -44,17 +45,51 @@ module.exports = {
             family: `Ubuntu Condensed`,
             variants: [`400`, `700`]
           },
+          {
+            family: `Montserrat`,
+            variants: [`700`]
+          },
         ],
       }
     },
     {
       resolve: `gatsby-source-datocms`,
       options: {
-        apiToken: `-`,
+        apiToken: '99692ab2cd0734e4ba099fe2c556c1',
         previewMode: false,
         disableLiveReload: false,
       },
     },
+    /*
+    {
+      resolve: `gatsby-plugin-paginate`,
+      options: {
+        sources: [
+          {
+            path: `/page`,
+            pageSize: 3,
+            template: `${__dirname}/src/pages/index.jsx`,
+            serialize: (results) => results.allDatoCmsArticle.edges,
+            query: `{
+              allDatoCmsArticle {
+                edges {
+                    node {
+                        id
+                        title
+                        slug
+                        shortDescription
+                        meta {
+                            publishedAt(formatString: "DD/MM/YYYY")
+                        }
+                    }
+                }
+            }
+            }`
+          }
+        ]
+      }
+    }
+    */
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

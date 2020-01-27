@@ -4,8 +4,7 @@ import Layout from "../components/layout"
 import parse from 'html-react-parser';
 
 
-
-const ArticleTemplate = (result) => {
+const ArticleTemplate = result => {
     return (
         <Layout>
             <article className="article">

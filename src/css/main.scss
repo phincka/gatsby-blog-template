@@ -3,3 +3,12 @@
 @import './footer';
 @import './mainView';
 @import './article';
+
+.NotFoundPage{
+    height: calc(100vh - 130px);
+    @include center;
+        &--title{
+            margin-top: -200px;
+            @include wideFont($mainColor, 1.9rem, 400, 24px, 1px);
+        }
+}

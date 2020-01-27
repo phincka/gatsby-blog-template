@@ -1,5 +1,6 @@
 import React from "react"
 
+
 const Footer = ({ siteAuthor }) => {
     return(
         <footer className="footer">
@@ -7,5 +8,6 @@ const Footer = ({ siteAuthor }) => {
         </footer>
     )
 }
+
 
 export default Footer

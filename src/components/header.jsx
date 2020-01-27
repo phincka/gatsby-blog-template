@@ -1,6 +1,6 @@
 import { Link } from "gatsby"
 import React from "react"
-//import PropTypes from "prop-types"
+
 
 const Header = () => (
   <header className="header">
@@ -10,5 +10,6 @@ const Header = () => (
     </nav>
   </header>
 )
+
 
 export default Header
