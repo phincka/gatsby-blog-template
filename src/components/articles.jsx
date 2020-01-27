@@ -24,9 +24,9 @@ const Articles = () => {
     const articlesMap = data.allDatoCmsArticle.edges.map(({ node }) => {
         return (
             <article key={node.id} className="posts_list__single">
-                <h2 className="posts_list__single--title"><Link to={node.slug}>{node.title}</Link></h2>
+                <h2 className="posts_list__single--title"><Link to={`/${node.slug}`} > {node.title}  </Link></h2>
                 <p className="posts_list__single--shortDescription">{node.shortDescription}</p>
-                <Link className="posts_list__single--button" to={node.slug}> Więcej...</Link>
+                <Link className="posts_list__single--button" to={`/${node.slug}`}> Więcej...</Link>
             </article>
         ) 
     })

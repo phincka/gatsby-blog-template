@@ -6,7 +6,6 @@ import parse from 'html-react-parser';
 
 
 const ArticleTemplate = (result) => {
-    console.log(result)
     return (
         <Layout>
             <article className="article">
@@ -15,7 +14,6 @@ const ArticleTemplate = (result) => {
                     { parse(result.pageContext.content) } 
                 </div>
                 <Link className="article--link" to="/"> Powrót </Link>
-
             </article>
         </Layout>
     )

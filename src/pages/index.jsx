@@ -6,7 +6,6 @@ import '../css/main.scss'
 import Articles from "../components/articles"
 
 const IndexPage = () => {
-    
 
     return (
         <Layout>
