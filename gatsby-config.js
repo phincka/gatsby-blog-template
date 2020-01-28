@@ -5,16 +5,8 @@ module.exports = {
     author: `Paweł Hincka`,
   },
   plugins: [
-    
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -55,7 +47,7 @@ module.exports = {
     {
       resolve: `gatsby-source-datocms`,
       options: {
-        apiToken: '99692ab2cd0734e4ba099fe2c556c1',
+        apiToken: 'f6181a61e48336ceac488165c495a1',
         previewMode: false,
         disableLiveReload: false,
       },
