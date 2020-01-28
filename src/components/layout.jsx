@@ -18,11 +18,11 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <div className="grid">
       <Header siteTitle={data.site.siteMetadata.title} />
           <main>{children}</main>
       <Footer siteAuthor={data.site.siteMetadata.author} />
-    </>
+    </div>
   )
 }
 

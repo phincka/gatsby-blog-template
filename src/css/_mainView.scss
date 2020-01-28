@@ -1,7 +1,5 @@
 .posts_list{
-    width: 75%;
-    margin-left: 50px;
-    margin-top: 50px;
+    padding: 10px 50px;
         &__single{
             width: 40%;
             margin-bottom: 90px;
@@ -16,5 +14,31 @@
                 &--button{
                     @include fontStyle($titleColor, 1.3rem, 400);
                 }
+                &:last-child{
+                    margin-bottom: 30px;
+                }
+        }
+}
+
+@media screen and (max-width: $laptop) {
+    .posts_list{
+        &__single{
+            width: 55%;
         }
     }
+}
+@media screen and (max-width: $mobile) {
+    .posts_list{
+        &__single{
+            width: 85%;
+        }
+    }
+}
+@media screen and (max-width: $phone) {
+    .posts_list{
+        padding: 10px 20px;
+        &__single{
+            width: 95%;
+        }
+    }
+}

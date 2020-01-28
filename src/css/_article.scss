@@ -85,3 +85,24 @@
             @include fontStyle($titleColor, 1.2rem, 400, right);
         }
 }
+@media screen and (max-width: $bigLaptop) {
+    .article{
+        width: 60%;
+    }
+}
+@media screen and (max-width: $laptop) {
+    .article{
+        width: 80%;
+    }
+}
+@media screen and (max-width: $mobile) {
+    .article{
+        width: 90%;
+    }
+}
+@media screen and (max-width: $phone) {
+    .article{
+        padding: 50px 15px 120px 15px;
+        width: 100%;
+    }
+}
