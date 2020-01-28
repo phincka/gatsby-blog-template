@@ -23,14 +23,6 @@ const Articles = () => {
 
     `)
     const post = data.allDatoCmsArticle.edges
-
-    console.log(post[0].node)
-
-    const tags = post[0].node.tags
-    const tagsArray = tags.split(', ')
-    
-    console.log(tagsArray)
-
     const articlesMap = post.map(({ node }) => {
         return (
             <article key={node.id} className="posts_list__single">
