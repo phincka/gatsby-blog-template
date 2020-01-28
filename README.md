@@ -25,6 +25,8 @@ $ npm install
 $ gatsby develop
 ```
 
+> Live version You may watch heren <a target="_blank" href="https://fiszapp.netlify.com/">here</a>
+
 ###### Created by
 ----
 Paweł Hincka, 2020
