@@ -10,7 +10,7 @@ const ArticleTemplate = result => {
             <article className="article">
                 <h1 className="article--title">{result.pageContext.title}</h1>
                 <div className="article__content">
-                    { parse(result.pageContext.content) } 
+                    { parse(`${result.pageContext.content}`) } 
                 </div>
                 <Link className="article--link" to="/"> Powrót </Link>
             </article>
