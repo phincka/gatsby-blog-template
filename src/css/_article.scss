@@ -48,6 +48,7 @@
                 text-decoration: underline;
             }
             pre{
+
                 font-family: monospace;
                 white-space: pre;
                 margin: 1em 0;
@@ -56,15 +57,17 @@
                 font-style: italic;
             }
             blockquote {
+
                 background: #f9f9f9;
-                border-left: 5px solid $secondaryColor;
+                border-left: 3px solid $secondaryColor;
                 margin: 3em 5px;
-                padding: 0.5em 10px;
+                padding: 0.1em 10px;
                 quotes: "\201C""\201D""\2018""\2019";
                 }
                 
                 blockquote p {
                 display: block;
+                @include fontStyle(#000, 1rem, 400);
                 }
             table {
                 margin: 10px 0;                

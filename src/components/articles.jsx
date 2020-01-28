@@ -15,14 +15,23 @@ const Articles = () => {
                         meta {
                             publishedAt(formatString: "DD/MM/YYYY")
                         }
+                        tags
                     }
                 }
             }
         }
 
     `)
+    const post = data.allDatoCmsArticle.edges
 
-    const articlesMap = data.allDatoCmsArticle.edges.map(({ node }) => {
+    console.log(post[0].node)
+
+    const tags = post[0].node.tags
+    const tagsArray = tags.split(', ')
+    
+    console.log(tagsArray)
+
+    const articlesMap = post.map(({ node }) => {
         return (
             <article key={node.id} className="posts_list__single">
                 <h2 className="posts_list__single--title"><Link to={`/${node.slug}`} > {node.title}  </Link></h2>

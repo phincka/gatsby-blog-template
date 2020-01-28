@@ -30,24 +30,6 @@
 	}
 }
 
-/*
-* Includes background path from dist folder and sets its properties
-*/
-@mixin bg($file, $size: false, $pos: false, $repeat: true) {
-	background-image: url('../../dist/img/#{$file}');
-
-	@if $repeat==true {
-		background-repeat: no-repeat;
-	}
-
-	@if $size {
-		background-size: $size;
-	}
-
-	@if $pos {
-		background-position: $pos;
-	}
-}
 
 /*
 * Flexbox row system
